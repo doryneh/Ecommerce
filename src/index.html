@@ -1,24 +1,222 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce</title>
-    <script type="text/html" src="{require('index.js')}"></script>
-</head>
-<body>
-  <div class="container-fluid">
-      <div class="row">
-          <nav class="navbar">
-              <div class="navbar-header">
-                  <a href="." class="navbar-brand">
-                <img src="./images/logo.png" alt="متجر عربي">  
-                </a>
-                
-              </div>
-          </nav>
-      </div>
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecommerce</title>
+        <script type="text/html" src="{require('index.js')}"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!-- Navbar -->
+            <div class="row">
+                <nav class="navbar custom-navbar navbar-expand-lg  justify-content-between">
+                    <div class="navbar-header">
+                        <a href="." class="navbar-brand">
+                            <img src="./images/logo.png" alt="متجر عربي">
+                        </a>
+                    </div>
+                    <form class="form-inline">
+                        <input type="search" class="form-control custom-form-control" placeholder="أبحث ...">
+                        <div class="dropdown categorie">
+                            <a
+                                type="button"
+                                class="nav-link dropdown-toggle custom-btn "
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                            >
+                                أختر الفئة
+                            </a>
+                            <ul class="dropdown-menu custom-dropdown-menu dropdown-menu-right">
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="search-category" value="men">
+                                            رجالي
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="search-category" value="women">
+                                            نسائي
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="search-category" value="baby">
+                                            أطفال
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="submit" class=" search-btn">أبحث</button>
+                    </form>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">الصفحة الرئيسية</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                href=""
+                                class="nav-link dropdown-toggle"
+                                id="navbarDopdown"
+                                role="button"
+                                data-toggle="dropdown"
+                                aria-expanded="false"
+                            >أقسام المتجر</a>
+                            <ul class="dropdown-menu custom-dropdown-menu">
+                                <li class="red-hover">
+                                    <a href="#" class="dropdown-list">رجالي</a>
+                                </li>
+                                <li class="red-hover">
+                                    <a href="#" class="dropdown-list">نسائي</a>
+                                </li>
+                                <li class="red-hover">
+                                    <a href="#" class="dropdown-list">أطفال</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="search.html" class="nav-link">البحث المتقدم</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">تواصل معنا</a>
+                        </li>
+                        <li>
+                            <a
+                                href="checkout.html"
+                                id="btn-Shoppingcart"
+                                class="btn custom-btn btn-icon"
+                                title="عربة الشراء"
+                                data-toggle="tooltip"
+                                data-placement="bottom"
+                            >
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!--Navbar end-->
+                        <!--Navbar end-->
+
+
+
+
+
+
+            <!--special products-->
+                        <!--special products-->
+
+                                    <!--special products-->
+
+            <div class="row carousel-row">
+                <div class="col-12 ">
+                    <div id="carousel-feature" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4 offset-2">
+                                            <img src="images/lacoste_1.png" alt="ت شيرت رجالي من لاكوست">
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="product-details">
+                                                <div class="sale large">
+                                                     50%
+                                                     <span>خصم</span>
+
+                                                </div>
+                                                <div class="product-category">تخفيضات</div>
+                                                <h1>ت-شيرت رجالي من لاكوست</h1>
+                                                <a href="product.html " class="btn btn-lg custom-btn custom-btn-primary">تسوق الآن</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4 offset-2">
+                                            <img src="images/lacoste_2.png" alt="حقيبة شانتاكو نسائية">
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="product-details">
+                                                <div class="product-category">نسائي</div>
+                                                <h1>حقيبة شانتاكو نسائية</h1>
+                                                <a href="product.html " class="btn btn-lg custom-btn custom-btn-primary">تسوق الآن</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4 offset-2">
+                                            <img src="images/lacoste_3.png" alt="ت شيرت بولو">
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="product-details">
+                                                <div class="product-category">الأكثر مبيعاً</div>
+                                                <h1>ت شيرت بولو</h1>
+                                                <a href="product.html " class="btn btn-lg custom-btn custom-btn-primary">تسوق الآن</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-4 offset-2">
+                                            <img src="images/adidas_3.png" alt="بدلة فايربرد الرياضية">
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="product-details">
+                                                <div class="product-category">أطفال</div>
+                                                <h1>بدلة فايربرد الرياضية</h1>
+                                                <a href="product.html " class="btn btn-lg custom-btn custom-btn-primary">تسوق الآن</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                <!--small images (carousel-indicators)-->
+                                                                                                <!--small images (carousel-indicators)-->
+                                                <!--small images (carousel-indicators)-->
+
+                        <div class="carousel-indicators custom-carousel-indicators-primary">
+                            <img src="images/lacoste_1.png" alt="ت-شيرت رجالي من لاكوست" data-target="#carousel-feature" data-slide-to="0" class="active">
+                            <img src="images/lacoste_2.png" alt="حقيبة شانتاكو نسائية" data-target="#carousel-feature"data-slide-to="1">
+                            <img src="images/lacoste_3.png" alt="ت-شيرت رجالي من بولو" data-target="#carousel-feature"data-slide-to="2">
+                            <img src="images/adidas_3.png" alt="بدلة فايربرد الرياضية" data-target="#carousel-feature"data-slide-to="3">
+
+                        </div>
+                        <!--End of small images (carousel-indicators)-->
+                                                <!--End of small images (carousel-indicators)-->
+
+                                 <a href="#carousel-feature" class="carousel-control-prev " data-slide="prev"><span class="fas fa-chevron-right fa-2x"></span></a>                                       <!--End of small images (carousel-indicators)-->
+                                 <a href="#carousel-feature" class="carousel-control-next " data-slide="next"><span class="fas fa-chevron-left fa-2x"></span></a>                                       <!--End of small images (carousel-indicators)-->
+
+                    </div>
+                </div>
+
+                <!--End special products-->
+            
+            
+            
+            
+            </div>
+        </div>
+    </body>
 </html>
