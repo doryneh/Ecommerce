@@ -1,8 +1,9 @@
-var path = require("path");
+var path = require('path');
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  
   entry: {
     app: "./src/index.js",
   },
@@ -17,9 +18,9 @@ module.exports = {
 
   devServer: {
     contentBase: path.join(__dirname, "/dist"),
-    port: 1239,
-    writeToDisk: true,
-    open: true,
+    port: 1233,
+    overlay: true,//for errors
+     open: true,
   },
 
   module: {
@@ -35,24 +36,34 @@ module.exports = {
           },
         ],
       },
-      /*  {
-        test: /\.css$/,
-        use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader"],
-      }, */
+    
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: MiniCssExtractPlugin.loader, 
             options: {
-              publicPath :'../',
+              publicPath: '../' 
             }
           },
-          "css-loader",
-        ],
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        use: [
+          {
+            loader: "file-loader", 
+            options: {
+              name: '[name].[ext]',
+              outputPath: "images",
+            }
+          }
+        ]
       },
 
-      {
+     
+    {
         test: /\.(svg|eot|woff|woff2|ttf)$/,
           use: [
             {
@@ -65,6 +76,8 @@ module.exports = {
             }
           ]
       },
+      
+  
       {
         test: require.resolve("jquery"),
         loader: 'expose-loader',
@@ -79,6 +92,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "product.html",
+      template: "./src/product.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "checkout.html",
+      template: "./src/checkout.html",
     }),
 
     new MiniCssExtractPlugin({ filename: "css/style.css" }),
