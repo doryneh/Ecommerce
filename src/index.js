@@ -1,13 +1,12 @@
-import '@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css';
-import './css/style.css';
-import "webpack-jquery-ui/css";
+import './scss/style.scss';
 
 import 'jquery/dist/jquery.min.js';
 import 'popper.js/dist/popper.js';
+import 'webpack-jquery-ui/css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '@fortawesome/fontawesome-free/js/all';
-import "webpack-jquery-ui";
-import "jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"
+import 'webpack-jquery-ui';
+import './css/style.css';
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
@@ -92,5 +91,4 @@ $( function() {
     });
   } );
 });
-
 

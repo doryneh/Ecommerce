@@ -1,0 +1,56 @@
+@import "./_variables";
+@import "./_custom-table";
+@import "./_mixins";
+@import "./_btn";
+@import "./custom.scss";
+.custom-form-control, .custom-btn {
+    border: 1px solid #eef0ea;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 6px 16px 7px 16px;
+    color: #868686;
+}
+.custom-btn:hover {
+    background-color: #d4d4d4;
+    border: 1px solid #8c8c8c;
+    color: $btn-primary-color-dark;
+    transition: all 0.3s ease;
+}
+.custom-btn-primary {
+    color: $brand-primary;
+    border-color: $brand-primary;
+    background-color: transparent;
+}
+
+.custom-btn-primary:hover, .custom-btn-primary:active, .custom-btn-primary:focus, .custom-btn-primary:active:focus, .custom-btn-primary:active:hover {
+    border-color: $btn-primary-color-dark;
+    border-color: $btn-primary-color-dark;
+    background-color: transparent;
+}
+.custom-btn-primary2 {
+    color: #000;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+}
+
+.custom-btn-primary2:hover, .custom-btn-primary2:active, .custom-btn-primary2:focus, .custom-btn-primary2:active:focus, .custom-btn-primary2:active:hover {
+    background-color: $btn-primary-color-dark;
+    border-color: $btn-primary-color-dark;
+    color: #000;
+}
+.custom-btn-danger{
+    color: #ffffff;
+    border: 1px solid $brand-primary  !important;
+    background-color: $brand-primary!important;
+    border: 3px;
+}
+.custom-btn-danger:hover,
+.custom-btn-danger:active,
+.custom-btn-danger:focus,
+.custom-btn-danger:active:focus,
+.custom-btn-danger:active:hover{
+    color: $brand-primary;
+    border-color: $brand-primary;
+    background-color: transparent!important;
+}

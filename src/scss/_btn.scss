@@ -1,0 +1,96 @@
+@import "./_variables";
+@import "./_mixins";
+
+.custom-form-control,
+.custom-btn {
+  border: 1px solid #eef0ea;
+  box-shadow: none;
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 6px 16px 7px 16px;
+  color: #868686;
+  &:hover {
+    background-color: #d4d4d4;
+    border: 1px solid #8c8c8c;
+    color: $btn-primary-color-dark;
+    transition: all 0.3s ease;
+  }
+}
+
+.custom-navbar {
+  .search-btn {
+    background-color: $red-color;
+    border-color: $red-color;
+    color: #fff;
+    border-radius: 0;
+    padding: 5px 15px 7px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 0;
+    &:hover,
+    &:active,
+    &:focus,
+    &.active:focus,
+    &.active:hover {
+      background-color: $red-color-color-dark;
+      border-color: $red-color-color-dark;
+      color: #ffffff;
+    }
+  }
+
+  a.btn-icon {
+    padding: 5px 10px 4px;
+    color: #777;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 15px;
+    &:hover {
+      color: black;
+      background-color: #bfbfbf;
+    }
+  }
+}
+
+
+.custom-thumbnail .add-to-cart-btn {
+  color: #53ccd7;
+  font-weight: bold;
+  border: 0;
+  &:hover,
+  &:active,
+  &:focus,
+  &:active:focus,
+  &:active:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
+}
+
+.custom-btn-primary {
+@include button-style($brand-primary,$btn-primary-color-dark);
+}
+.custom-arrow-btn {
+  background-color: #fff;
+  color: #868686;
+  border: 1px solid #ebebeb;
+  box-shadow: none;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.custom-btn-primary2 {
+    @include button-style($brand-primary,$btn-primary-color-dark);
+
+}
+
+.custom-btn-with-icon {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+.custom-btn-danger {
+    @include button-style($red-color,$red-color-color-dark);
+}
