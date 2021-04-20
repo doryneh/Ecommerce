@@ -1,10 +1,13 @@
 import '@laylazi/bootstrap-rtl/dist/css/bootstrap-rtl.min.css';
 import './css/style.css';
+import "webpack-jquery-ui/css";
 
 import 'jquery/dist/jquery.min.js';
 import 'popper.js/dist/popper.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '@fortawesome/fontawesome-free/js/all';
+import "webpack-jquery-ui";
+import "jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
@@ -43,7 +46,51 @@ $(document).ready(function(){
         });
         $('#total-price-for-all-products').text( totalePriceForAllProducts);
     }
+    var citiesByCountry = {
+        sa: ["جدة","الرياض"],
+        eg: ['الإسكندرية','القاهرة'],
+        jo: ['عمان','الزرقاء'],
+        si: ['دمشق','حلب','حماه']
+    };
+    $('#form-checkout select[name="country"]').change(function(){
+        var country = $(this).val();
+        var cities = citiesByCountry[country];
+        $('#form-checkout select[name="city"]').empty();
+        $('#form-checkout select[name="city"]').append(
+        '<option value="" disabled selected>أختر مدينة</option>'
+        );
+   
+    cities.forEach(function(city) {
+        var newOption = $('<option></option>');
+        newOption.text(city);
+        newOption.val(city);
+        $('#form-checkout select[name="city"]').append(newOption);
+    });
+});
+$("#form-checkout input[name='payment_method']").change(function(){
+    var paymentMethod =$(this).val();
+    if(paymentMethod === 'on-delivery'){
+        $('#credit-card-info input').prop('disabled' , true);
+    }
+    else{
+        $('#credit-card-info input').prop('disabled' , false);
+    }
+    $('#credit-card-info').toggle();
+});
 
+
+$( function() {
+    $( "#price-range" ).slider({
+      range: true,
+      min: 50,
+      max: 1000,
+      values: [ 250, 800 ],
+      slide: function(event, ui){
+        $("#price-min").text(ui.values[0]);
+        $("#price-max").text(ui.values[1]);
+    }
+    });
+  } );
 });
 
 

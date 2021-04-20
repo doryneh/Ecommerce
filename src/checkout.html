@@ -69,7 +69,7 @@
                     <div class="collapse navbar-collapse" id="navbar-collapsed-menu">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">الصفحة الرئيسية</a>
+                                <a href="index.html" class="nav-link">الصفحة الرئيسية</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a
@@ -131,14 +131,14 @@
                         <h1 class="custom-heading">
                             عربة الشراء
                         </h1>
-                        <form id="form-checkout">
+                        <form id="form-checkout" action="payment.html">
                             <table class="custom-table">
                                 <thead>
                                     <tr>
                                         <th class="first  col-5">المنتج</th>
                                         <th class="col-2">السعر</th>
                                         <th class="col-2">العدد المطلوب</th>
-                                        <th class="col-2 d-md-block d-none">السعر الأحصائي</th>
+                                        <th class="col-2 total-price-for-product">السعر الأحصائي</th>
                                         <th class="col-1"></th>
                                     </tr>
                                 </thead>
@@ -161,13 +161,14 @@
                                             400$
                                         </td>
                                         <td class="col-2">
+                                            <input type="hidden" name="product1" value="تي-شيرت رجالي من لاكوست">
                                             <select name="quantity1" class="form-control custom-form-control quantity" data-product-quantity>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3" selected>3</option>
                                             </select>
                                         </td>
-                                        <td class="col-2 total-price-for-product d-md-block d-none">
+                                        <td class="col-2 total-price-for-product">
                                             1200$
                                         </td>
                                         <td class="col-2">
@@ -195,16 +196,17 @@
                                             300$
                                         </td>
                                         <td class="col-2">
-                                            <select name="quantity1" class="form-control custom-form-control quantity" data-product-quantity="">
+                                            <input type="hidden" name="product2" value="تي-شيرت رجالي من آديداس">
+                                            <select name="quantity2" class="form-control custom-form-control quantity" data-product-quantity="">
                                                 <option value="1" selected>1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                             </select>
                                         </td>
-                                        <td class="col-2  total-price-for-product d-md-block d-none">
+                                        <td class="col-2 total-price-for-product">
                                             300$
                                         </td>
-                                        <td class="col-2">
+                                        <td class="col-1">
                                             <button class="btn btn-danger custom-btn custom-btn-danger" data-remove-from-cart>
                                                 <span class="d-md-block d-none">حذف</span>
                                                 <i class="far fa-trash-alt d-block d-md-none"></i>
@@ -227,10 +229,8 @@
                                 </tfoot>
                             </table>
                             <button type="submit" class="btn custom-btn-primary2 custom-btn-with-icon">
-                                <span>
                                     إكمال عملية الشراء
                                     <i class="fas fa-dollar-sign"></i>
-                                </span>
                             </button>
                         </form>
                     </div>

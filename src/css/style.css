@@ -6,6 +6,7 @@
     font-style: normal;
 }
 
+
 body {
     font-family: "JF Flat Regular ", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;
@@ -110,11 +111,18 @@ body {
 }
 
 .custom-navbar .navbar-nav li.nav-item .active {
-    color: #ff2647;
+    color: #ff2647!important;
     border-bottom: 1px solid #ff2647;
     font-weight: 700;
 }
+.nav-item.active{
+    border-bottom: 1px solid hsl(351, 100%, 57%);
+    font-weight: 700;
 
+}
+.nav-item.active a{
+    color: #ff2647!important;
+}
 .custom-navbar .navbar-nav li.nav-item .active:hover {
     background-color: #e7e7e7;
 }
@@ -504,7 +512,7 @@ h3.custom-heading {
     margin: auto;
 }
 
-input[type=email] {
+input[type=email] , input[type="number"]{
     direction: rtl;
     text-align: right;
 }
@@ -769,11 +777,146 @@ h1.custom-heading{
     color: #a9a9a9;
 }
 
+/*********************************************
+************************
+payment Page 
+*************************
+*****************************************************/
+.custom-input-details{
+    border-width: 2px;
+    border-radius: 2px;
+    height: 46px!important;
+    padding:0px 16px ;
+    font-size: 18px;
+    width: 97%;
+}
+.custom-input-details:focus{
+    border-color: #f8ad47;
+    box-shadow: none;
+}
+#credit-card-info{
+    margin-right: 3%;
+}
+/*********************************************
+************************
+search Page 
+*************************
+*****************************************************/
+#form-advanced-search{
+    border: 1px solid #ebebeb;
+    padding-bottom: 28px;
+    display: table;
+}
+#form-advanced-search .custom-panel{
+    border: none;
+    padding: 5px;
+
+}
+.custom-panel .card-header{
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding: 7px 10px 13px;
+}
+.custom-list-group>.list-group-item{
+    border: none;
+    padding: 0 10px 14px 0;
+}
+.custom-list-group>.list-group-item:last-child{
+    padding: 0 10px 0px 0px;
+}
+#form-advanced-search label{
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
 
+#search-results .custom-thumbnail{
+    margin-right: -8px;
+    margin-left: -8px;
+}
+.ui-slider{
+    margin: 25px 0 15px;
+    height: 2px !important;
+}
+.ui-slider .ui-slider-handle{
+    background-color: #f8ad47!important;
+    border: none !important;
+    border-radius: 50%;
+    height: 12px !important;
+    width: 12px !important;
+    top: -6px !important;
+}
+.ui-slider .ui-slider-range{
+    border: 1px solid #f8ad47 !important;
+    top: -1px !important;
+}
+.custom-pagination li a{
+    border: 1px solid #f8ad47 !important;
+    background-color: #f8ad47 !important;
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    margin-right: 3px ;
+    margin-left: 3px;
+    padding-top: 0 !important;
+    color: #ffffff !important;
+    transition: all .3s ease;
+    display: inline-block;
+}
+.custom-pagination li.active a{
+    background-color: transparent !important;
+    color: #f8ad47 !important;
+}
+.page-item:last-child .page-link {
+    font-size: 11px;
+    padding-right: 4px ;
+}
+.page-item:first-child .page-link{
+    font-size: 11px;
+    padding-right: 1px ;
+}
+.custom-pagination li a:active,
+.custom-pagination li a:hover,
+.custom-pagination li a:focus{
+    background-color: #ec9822 !important;
+    border: #ec9822 !important;
+    color: white !important;
+}
 
 
+/*********************************************
+************************
+contact Page 
+*************************
+*****************************************************/
+#map{
+    padding: 0;
+}
+.heading-with-border-bottom{
+    margin-bottom: 30px;
 
+}
+#contact-options h4{
+    font-size: 18px;
+    padding-bottom: 12px;
+}
+#contact-info {
+    margin-bottom: 25px;
+}
+#contact-info .fa-lg{
+    color: #f8ad47;
+    font-size: 18px;
+    margin: 10px 10px 7px 10px;
+    width: 25px;
+    text-align: center;
+}
+#contact-options textarea{
+    height: 128px !important;
+}
+#contact-options {
+    margin-bottom: 25px;
+}
 
 
 
@@ -912,6 +1055,14 @@ h1.custom-heading{
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
     }
+    .custom-thumbnail h4{
+        font-size: 11px;
+        margin-top: 10px;
+    }
+    .price{
+        font-size: 10px;
+
+    }
     /*product page*/
     .product-option{
         width: 40px;
@@ -919,6 +1070,14 @@ h1.custom-heading{
         margin: 10px;
         line-height: 40px;
         font-size: 20px;
+    }
+    .ui-slider .ui-slider-handle{
+        height: 20px !important;
+        width: 20px !important;
+        top: -10px !important;
+    }
+    #form-subscription{
+        margin-bottom: 40px;
     }
 }
 
@@ -994,6 +1153,9 @@ h1.custom-heading{
     }
     .svg-inline--fa.fa-w-10 {
         width: 0.325em;
+    }
+    .total-price-for-product{
+        display: none;
     }
 }
 
