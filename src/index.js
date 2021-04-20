@@ -6,6 +6,7 @@ import 'webpack-jquery-ui/css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '@fortawesome/fontawesome-free/js/all';
 import 'webpack-jquery-ui';
+import "jquery-ui-touch-punch/jquery.ui.touch-punch";
 import './css/style.css';
 
 $(document).ready(function(){
@@ -87,6 +88,7 @@ $( function() {
       slide: function(event, ui){
         $("#price-min").text(ui.values[0]);
         $("#price-max").text(ui.values[1]);
+
     }
     });
   } );
