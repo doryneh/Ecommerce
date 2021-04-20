@@ -1170,4 +1170,27 @@ contact Page
         padding-left: 15px;
         padding-right: 15px;
     }
+    #nextflesh {
+        background-color: #c2101e!important;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: white!important;
+        position: relative;
+        right: 48%;
+        top: -355px;
+        font-size: 5px!important;
+    }
+    #prevflesh {
+        background-color: #c2101e!important;
+        width: 30px;
+        height: 30px;
+        padding-left: 5px;
+        border-radius: 50%;
+        color: rgb(255, 255, 255)!important;
+        position: relative;
+        right: 40%;
+        top: -325px;
+        font-size: 5px!important;
+    }
 }
