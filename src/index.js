@@ -5,8 +5,8 @@ import 'popper.js/dist/popper.js';
 import 'webpack-jquery-ui/css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '@fortawesome/fontawesome-free/js/all';
+import "C:/Users/yr/Desktop/hsoub/Ecommerce/node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.js";
 import 'webpack-jquery-ui';
-import "jquery-ui-touch-punch/jquery.ui.touch-punch";
 import './css/style.css';
 
 $(document).ready(function(){
