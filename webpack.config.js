@@ -1,7 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
+var OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
   
@@ -9,13 +9,14 @@ module.exports = {
     app: "./src/index.js",
   },
 
+
   output: {
     path: path.join(__dirname, "/dist"),
     publicPath: '',
     filename: "main.js",
   },
 
-  mode: "development",
+  mode: "production",
 
   devServer: {
     contentBase: path.join(__dirname, "/dist"),
@@ -40,20 +41,18 @@ module.exports = {
     
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
           use: [
             {
               loader: MiniCssExtractPlugin.loader, 
               options: {
-                publicPath: '../' ,
+                publicPath: '../' 
+             //   minimize: true,
               }
             },
             'css-loader',
             'sass-loader'
           ]
       },
-      
-
       {
         test: /\.(png|svg|jpe?g|gif)$/,
         use: [
@@ -85,22 +84,14 @@ module.exports = {
   
       {
         test: require.resolve("jquery"),
-          loader: 'expose-loader',
-            options:{
-              exposes:['$','jquery',"jQuery"],
-            }
+        loader: 'expose-loader',
+        options:{
+          exposes:['$','jquery'],
+        }
       }
     ],
   },
 
-  optimization: {
-    minimize: true,
-    minimizer: [
-      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      // `...`,
-      new CssMinimizerPlugin(),
-    ],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
@@ -126,11 +117,14 @@ module.exports = {
       filename: "contact.html",
       template: "./src/contact.html",
     }),
-
-
-
     new MiniCssExtractPlugin({ filename: "css/style.css" }),
+    new OptimizeCSSAssetsPlugin({
+      assetNameRegExp: /\.optimize\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+      canPrint: true
+    })
   ],
-
-
 };
