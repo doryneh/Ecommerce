@@ -1,0 +1,28 @@
+@import "./_variables";
+
+.price {
+  color: $price-color;
+  display: inline-block;
+  .custom-thumbnail .price {
+    display: block;
+    top: 180px;
+    float: right;
+  }
+  .custom-panel h4,
+  .custom-panel .price {
+    font-size: 130%;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    display: inline-block;
+  }
+  .price.large {
+    font-size: 30px;
+  }
+  .custom-table .total-price * {
+    color: black;
+  }
+  .custom-table,
+  .total-price .custom-text-muted .custom-text-muted {
+    color: #a9a9a9;
+  }
+}
